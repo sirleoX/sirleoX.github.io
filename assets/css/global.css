@@ -1,0 +1,11 @@
+/*Global CSS*/
+:root {
+	--leo-black: #100f0f;
+	--leo-red: #a90c0c;
+} 
+
+body {
+	background: var(--leo-black);
+	padding: 0;
+	margin: 0;
+}
