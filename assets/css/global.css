@@ -1,7 +1,8 @@
 /*Global CSS*/
 :root {
-    --leo-black: #060006;
-    --leo-red: #a90c0c;
+    --leo-black: #090008;
+    --leo-red: #db0043;
+--leo-light-red: #e7608c;
 }
 
 @font-face {
@@ -46,7 +47,7 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background: radial-gradient(circle at 40% 50%, transparent, var(--leo-black) 69%);
+        background: linear-gradient(to bottom, transparent, var(--leo-black) 84%);
     }
 }
 
@@ -83,4 +84,23 @@ nav.position-absolute {
 
 h1.fancy-font.display-1.text-leo-red {
     text-shadow: -0.75px -0.7px #2a0005;
+}
+.position-absolute.bottom-0.left-0.w-100.d-flex {
+    height: 30%;
+    z-index: 999;
+    /* backdrop-filter: blur(2px); */
+}
+
+.thmbnail.justify-content-end.align-items-start.col-3.d-flex.flex-column {
+    border-bottom: 2px solid grey;
+}	
+
+.position-absolute.bottom-0.left-0.w-100.d-flex {
+    height: 30%;
+    z-index: 999;
+    /* backdrop-filter: blur(2px); */
+}
+
+.thmbnail.justify-content-end.align-items-start.col-3.d-flex.flex-column {
+    border-bottom: 2px solid grey;
 }
