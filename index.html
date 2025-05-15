@@ -15,90 +15,73 @@
     </head>
 
     <body>
-        <section class=" landing position-relative w-100">
-            <nav class="navbar navbar-expand-lg navbar-dark w-100 position-absolute">
-                <div class="container-fluid">
-                    <a class="fancy-font navbar-brand" href="#">Sir Leo</a>
-                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="navbar-collapse collapse" id="navbarNavDropdown" style="">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Events
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="pages/workshops.html">Workshops</a></li>
-                                    <li><a class="dropdown-item" href="pages/performances.html">Performances</a></li>
-                                    <li><a class="dropdown-item" href="pages/erotic_spanking.html">Erotic Spanking</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Private Sessions
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="pages/service.html">Service</a></li>
-                                    <li><a class="dropdown-item" href="pages/coaching.html">Coaching</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <div class=" pt-sm-0 cols-2-wrapper d-flex flex-column flex-sm-row row-cols-2">
-                <div class="col-12 order-1  img-wrapper">
-                    <img src="assets/imgs/dmz_22.jpg" alt="" class="d-sm-none h-fluid ">
-                    <img src="assets/imgs/dmz_12.jpg" alt="" class="d-none d-sm-block img-fluid max-vh-100">
-                    <div class="text-light position-absolute justify-content-evenly bottom-0 left-0 w-100 d-flex ">
-                        <div class="thmbnail justify-content-end align-items-center col-3 d-flex flex-column">
-                            <h3 class="mb-0 fs-2 fancy-font text-white" style="
-color: #2f003e!important;
-">Events</h3>
-                            <p class="my-1 text-secondary strict-font fs-6">hELLO</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-2 col-12 order-2 d-flex flex-column justify-content-center align-items-start">
-                    <h1 class="fancy-font display-1 text-leo-red">Embrace Your Desires</h1>
-                    <p class="text-white fs-6 pe-4 strict-font" style="color: #f0e4eb!important;">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu
-                    </p>
+        <section id="opening">
+            <div id="opening-img" class="mb-5">
+                <img src="assets/imgs/dmz_2.jpg" class="img-fluid" alt="">
+            </div>
+            <div id="opening-text" class="text-center">
+                <h1 class="display-1 text-red fancy-font">Explore Your Deepest Desires</h1>
+                <div id="opening-credits">
+                    <h3 class="text-white fancy-font text-center mb-3">~ Sir Leo</h3>
                 </div>
             </div>
         </section>
-        <section>
-            <div class="col-12 order-1   col-sm-5 img-wrapper"><img src="assets/imgs/dmz_16.jpg" alt="" class="h-fluid max-vh-100"></div>
+        <section id="events" class="px-2 px-md-5">
+            <div class="section-title my-5 text-center">
+                <h1 class="text-red  display-3">Events</h1>
+                <p class="text-secondary">Electrify your event with erotic impact play, live kink performanes, and immersive workshops that engage, educate, and arouse. </p>
+            </div>
+            <div class="event-services gap-md-4 justify-content-md-center d-md-flex flex-md-row">
+                <div class="service p-2 rounded my-4 d-flex flex-row flex-md-column col-md-4">
+                    <div class="service-image col-4 col-md-12" name="spanking"></div>
+                    <div class="service-description mt-md-4 ps-3 px-md-1 col-md-12 d-flex col-8 flex-column">
+                        <h3>Erotic Spanking</h3>
+                        <p>Impact play as art - rhythmic, intimate, and unforgettable.</p>
+                        <a href=""><button class="btn w-100 btn-danger">Spank Me</button></a>
+                    </div>
+                </div>
+                <div class="service p-2 rounded my-4 d-flex flex-row flex-md-column col-md-4">
+                    <div class="service-image col-4 col-md-12" name="performance"></div>
+                    <div class="service-description mt-md-4 ps-3 px-md-1 col-md-12 d-flex col-8 flex-column">
+                        <h3>Performances</h3>
+                        <p>Live kink theatre that seduces the senses and stirs the crowd.</p>
+                        <a href=""><button class="btn w-100 btn-danger">Book a Show</button></a>
+                    </div>
+                </div>
+                <div class="service p-2 rounded my-4 d-flex flex-row flex-md-column col-md-4">
+                    <div class="service-image col-4 col-md-12" name="workshop"></div>
+                    <div class="service-description mt-md-4 ps-3 px-md-1 col-md-12  d-flex col-8 flex-column">
+                        <h3>Workshop</h3>
+                        <p>Explore your desires through hands-on discovery.</p>
+                        <a href=""><button class="btn w-100 btn-danger">Train Me</button></a>
+                    </div>
+                </div>
+            </div>
         </section>
-        <!-- <section id="tempGallery" class="w-100 d-flex row-cols-3 flex-wrap">
-<div class="img-wrapper"><img src="assets/imgs/dmz_1.jpg" alt="" class="img-fluid"></div>
-<div class="img-wrapper"><img src="assets/imgs/dmz_2.jpg" alt="" class="img-fluid"></div>
-<div class="img-wrapper"><img src="assets/imgs/dmz_3.jpg" alt="" class="img-fluid"></div>
-<div class="img-wrapper"><img src="assets/imgs/dmz_4.jpg" alt="" class="img-fluid"></div>
-<div class="img-wrapper"><img src="assets/imgs/dmz_5.jpg" alt="" class="img-fluid"></div>
-<div class="img-wrapper"><img src="assets/imgs/dmz_6.jpg" alt="" class="img-fluid"></div>
-<div class="img-wrapper"><img src="assets/imgs/dmz_7.jpg" alt="" class="img-fluid"></div>
-<div class="img-wrapper"><img src="assets/imgs/dmz_8.jpg" alt="" class="img-fluid"></div>
-<div class="img-wrapper"><img src="assets/imgs/dmz_9.jpg" alt="" class="img-fluid"></div>
-<div class="img-wrapper"><img src="assets/imgs/dmz_10.jpg" alt="" class="img-fluid"></div>
-<div class="img-wrapper"><img src="assets/imgs/dmz_11.jpg" alt="" class="img-fluid"></div>
-<div class="img-wrapper"><img src="assets/imgs/dmz_12.jpg" alt="" class="img-fluid"></div>
-<div class="img-wrapper"><img src="assets/imgs/dmz_13.jpg" alt="" class="img-fluid"></div>
-<div class="img-wrapper"><img src="assets/imgs/dmz_14.jpg" alt="" class="img-fluid"></div>
-<div class="img-wrapper"><img src="assets/imgs/dmz_15.jpg" alt="" class="img-fluid"></div>
-<div class="img-wrapper"><img src="assets/imgs/dmz_16.jpg" alt="" class="img-fluid"></div>
-<div class="img-wrapper"><img src="assets/imgs/dmz_17.jpg" alt="" class="img-fluid"></div>
-<div class="img-wrapper"><img src="assets/imgs/dmz_18.jpg" alt="" class="img-fluid"></div>
-<div class="img-wrapper"><img src="assets/imgs/dmz_19.jpg" alt="" class="img-fluid"></div>
-<div class="img-wrapper"><img src="assets/imgs/dmz_20.jpg" alt="" class="img-fluid"></div>
-<div class="img-wrapper"><img src="assets/imgs/dmz_21.jpg" alt="" class="img-fluid"></div>
-<div class="img-wrapper"><img src="assets/imgs/dmz_22.jpg" alt="" class="img-fluid"></div>
-<div class="img-wrapper"><img src="assets/imgs/dmz_23.jpg" alt="" class="img-fluid"></div>
-</section> -->
+        <section id="private-events" class="px-2 px-md-5">
+            <div class="section-title my-5 text-center">
+                <h1 class="text-red display-3">Private Sessions</h1>
+                <p class="text-secondary">One-on-one coaching and tailored kink services designated to deepen your exploration, refine your skills, and honor your desires. </p>
+            </div>
+            <div class="d-md-flex flex-md-row event-services gap-md-4 justify-content-md-center">
+                <div class="service p-2 rounded my-4 d-flex flex-row flex-md-column col-md-4">
+                    <div class="service-image col-4 col-md-12" name="service"></div>
+                    <div class="service-description mt-md-4 ps-3 px-md-1 col-md-12 d-flex col-8 flex-column">
+                        <h3>Service</h3>
+                        <p>Tailored scenes designed to stir, soother, or ignite.</p>
+                        <a href=""><button class="btn w-100 btn-danger">Book Yours</button></a>
+                    </div>
+                </div>
+                <div class="service p-2 rounded my-4 d-flex flex-row flex-md-column col-md-4">
+                    <div class="service-image col-4 col-md-12" name="coaching"></div>
+                    <div class="service-description mt-md-4 ps-3 px-md-1 col-md-12 d-flex col-8 flex-column">
+                        <h3>Coaching</h3>
+                        <p>Guided exploration to deepen your play and pleasure.</p>
+                        <a href=""><button class="btn w-100 btn-danger">Guide Me</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
         <footer class="p-4">
             <p class="text-sm text-center">
                 © 2025 Sir Leo. All Rights Reserved.
