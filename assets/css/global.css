@@ -122,10 +122,10 @@
         }
 
         .service-image[name='performance'] {
-            background: url('../imgs/dmz_12.jpg');
+            background: url('../imgs/leo_perform.jpg');
             background-repeat: no-repeat;
             background-size: cover;
-            background-position: center center;
+            background-position: top center;
         }
 
         .service-image[name='coaching'] {
@@ -136,14 +136,14 @@
         }
 
         .service-image[name='workshop'] {
-            background: url('../imgs/dmz_13.jpg');
+            background: url('../imgs/leo_fire.jpg');
             background-repeat: no-repeat;
             background-size: cover;
-            background-position: center center;
+            background-position: top center;
         }
 
         .service-image[name='service'] {
-            background: url('../imgs/dmz_10.jpg');
+            background: url('../imgs/leo_service.jpeg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;
