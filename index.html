@@ -12,11 +12,25 @@
         <link rel="stylesheet" href="assets/fonts/BilboSwashCaps-Regular.ttf">
         <link rel="stylesheet" href="assets/fonts/RobotoCondensed-Medium.ttf">
         <script src="assets/js/bootstrap.bundle.js"></script>
+        <script>
+            var is_onEmailList = localStorage.getItem('is_onEmailList') || false;
+            var is_verified = localStorage.getItem('is_verified') || false;
+            window.addEventListener('DOMContentLoaded', function() {
+                if (is_verified === 'true'){
+                    document.querySelector('#overlay-verify-age').style.setProperty('display','none','important');
+                    document.querySelector('body').style.setProperty('overflow-y','auto','important');
+                    if(is_onEmailList === false || null)
+                        setTimeout(showEmailSignup, 6000);
+                } else {
+                    document.querySelector('#overlay-verify-age').style.setProperty('display','flex','important');
+                }
+            })
+        </script>
     </head>
 
     <body>
-        <section id="overlay-verify-age" class="align-items-center justify-content-center position-fixed d-flex overlay w-100 h-100">
-            <div class="overlay-content gap-3 rounded d-flex flex-column p-3 col-10 col-sm-8 h-50">
+        <section id="overlay-verify-age" class="align-items-center d-none justify-content-center position-fixed d-flex overlay w-100 h-100">
+            <div class="overlay-content justify-content-center align-items-center gap-3 rounded d-flex flex-column p-3 col-10 col-sm-8 h-50">
                 <h1 class="text-white text-center">Are you 21 or older?</h1>
                 <p class="text-white text-center">This site contains adult content intended for mature audiences. You must be 21 or older to enter.</p>
                 <div class="d-flex flex-row align-items-center justify-content-center gap-3">
@@ -26,7 +40,7 @@
             </div>
         </section>
         <section id="overlay-email" class="align-items-center justify-content-center position-fixed d-none overlay w-100 h-100">
-            <div class="overlay-content gap-2 rounded d-flex flex-column p-3 col-10 col-sm-8 h-50">
+            <div class="overlay-content justify-content-center gap-2 rounded d-flex flex-column p-3 col-10 col-sm-8 h-50">
                 <h1 class="text-white text-center">Don’t Miss a Beat</h1>
                 <p class="text-white text-center">Get updates, event invites, and exclusive access — if you can handle it.</p>
                 <input type="email" class="mb-4" placeholder="Enter email here">
@@ -140,12 +154,15 @@
             </p>
         </footer>
     <script>
+    
         function showEmailSignup() {
             document.querySelector('#overlay-email').style.setProperty('display','flex','important');
             document.querySelector('body').style.setProperty('overflow-y','hidden','important');
         }
         function emailVerify(condition) {
             if (condition === 'subscribe') {
+                localStorage['is_onEmailList'] ='true';
+                document.querySelector('#overlay-email').style.setProperty('display','none','important')
             } else {
                 document.querySelector('#overlay-email').style.setProperty('display','none','important');
             }
@@ -158,9 +175,12 @@
 
         function verify(condition) {
             if (condition === "yes") {
+                localStorage['is_verified'] = 'true';
                 document.querySelector('#overlay-verify-age').style.setProperty('display','none','important');
                 document.querySelector('body').style.setProperty('overflow-y','auto','important');
-                setTimeout(showEmailSignup, 6000);
+                
+                if(is_onEmailList)
+                    setTimeout(showEmailSignup, 6000);
             } else {
                 window.location.replace('https://www.scarleteen.com')
             }

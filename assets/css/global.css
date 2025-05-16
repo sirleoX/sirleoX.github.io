@@ -200,7 +200,9 @@ footer {
         fill: var(--leo-red);
     }
 
-    p {}
+    p {
+        -webkit-text-stroke: 0.14px var(--leo-red);
+    }
 
     .flex-column {
         width: min-content;
