@@ -80,9 +80,12 @@
     }
 
     #opening-img {
-        display: block;
+        background: url('../imgs/dmz_3.jpeg');
+        background-repeat:no-repeat;
+        background-size: contain;
+        background-attachment: fixed;
         position: relative;
-        box-shadow: 0px 11px 37px 9px var(--leo-red);
+        box-shadow: inset 0px -20px 8px 0px black;
     }
 
     #opening-img::after {
@@ -91,7 +94,7 @@
         content: " ";
         width: 100%;
         height: 100%;
-        background: linear-gradient(to bottom, transparent 85%, #780408e0);
+        /* background: linear-gradient(to bottom, transparent 93%, #681014c4); */
         top: 0;
         position: absolute;
     }
@@ -107,13 +110,12 @@
             p {
                 font-weight: 300;
                 color: white;
-                font-size: 0.86rem;
             }
         }
 
 
         .service-image[name='spanking'] {
-            background: url('../imgs/dmz_1.jpg');
+            background: url('../imgs/dmz_22.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;
@@ -127,7 +129,7 @@
         }
 
         .service-image[name='coaching'] {
-            background: url('../imgs/dmz_15.jpg');
+            background: url('../imgs/dmz_19.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;
@@ -146,12 +148,46 @@
             background-size: cover;
             background-position: center center;
         }
+    }
+       
 
+    .service-image {
+        border: 1px solid #5b0000cc;
+        border-radius:5px;
+    }
+    footer{
+        svg {
+            height:1.5rem;
+            max-width:1.4rem ;
+            fill:var(--leo-red);
+        }
+        p{
+        }
+        .flex-column {
+            width:min-content;
+
+        }
     }
 
+    @media (min-width: 100px) and (max-width: 767px) {
+        .service {
+            p {
+                font-size: 0.86rem;
+            }
+        }
+         .section-title .fs-5, footer .fs-5{
+            font-size:1.1rem!important;
+        }
+    }
     @media (min-width: 768px) {
+        .fs-5 {
+            font-size:1.5rem!important;
+        }
+        .service p {
+            font-size:1.25rem!important;
+        }
         .service-image {
-            min-height: 10rem;
+            min-height: 15rem;
         }
     }
 
