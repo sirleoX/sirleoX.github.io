@@ -46,7 +46,7 @@
                 <form id="emailSignup">
                     <input type="email" class="mb-4" name="entry.24457090" placeholder="Enter email here">
                     <div class="d-flex flex-row align-items-center justify-content-center gap-3">
-                        <button class="btn  btn-secondary col-6 fs-5" onclick="closeEmailOverlay()">Stay Vanilla</button>
+                        <button class="btn  btn-secondary col-6 fs-5" id="close" onclick="closeEmailOverlay()">Stay Vanilla</button>
                         <button type="submit" class="btn btn-danger col-6 fs-5">Subscribe</button>
                     </div>
                 </form>
@@ -209,7 +209,7 @@
             document.querySelector('#overlay-verify-age').style.setProperty('display', 'none', 'important');
             document.querySelector('body').style.setProperty('overflow-y', 'auto', 'important');
 
-            if (is_onEmailList)
+            if(is_onEmailList === 'false' || false || null)
                 setTimeout(showEmailSignup, 6000);
         } else {
             window.location.replace('https://www.scarleteen.com')
@@ -230,9 +230,13 @@
 
     document.getElementById("emailSignup").addEventListener('submit', (e) => {
         e.preventDefault();
-        sendToForms().then(alterOverlayText("You're In", "Updates, invites, and access — you'll know before the others.")).then(() => {
-            localStorage.setItem('is_onEmailList', true);
-        }).then(setTimeout(closeEmailOverlay, 2500));
+        if(e.submitter.id != 'close') {
+            sendToForms().then(alterOverlayText("You're In", "Updates, invites, and access — you'll know before the others.")).then(() => {
+                localStorage.setItem('is_onEmailList', true);
+            }).then(setTimeout(closeEmailOverlay, 2500));
+        } else {
+            closeEmailOverlay();
+        }
     });
     const buffer = 60;
     window.addEventListener('scroll', () => {
