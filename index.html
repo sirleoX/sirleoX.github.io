@@ -237,7 +237,7 @@
             closeEmailOverlay();
         }
     });
-    const buffer = 60;
+    const buffer = 80;
     window.addEventListener('scroll', () => {
         document.querySelectorAll('.service:not(.reveal)').forEach((ele) => {
             if ((window.scrollY + window.innerHeight) > ele.offsetTop + buffer) {
