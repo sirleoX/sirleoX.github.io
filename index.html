@@ -180,9 +180,9 @@
         </footer>
         <script>
     /*if (condition === 'subscribe') {
-            localStorage['is_onEmailList'] ='true';
-            document.querySelector('#overlay-email').style.setProperty('display','none','important')
-        } */
+        localStorage['is_onEmailList'] ='true';
+        document.querySelector('#overlay-email').style.setProperty('display','none','important')
+    } */
 
     function showEmailSignup() {
         document.querySelector('#overlay-email').style.setProperty('display', 'flex', 'important');
@@ -230,10 +230,18 @@
 
     document.getElementById("emailSignup").addEventListener('submit', (e) => {
         e.preventDefault();
-        sendToForms().then(alterOverlayText("You're In","Updates, invites, and access — you'll know before the others.")).then(()=> {
-            localStorage.setItem('is_onEmailList',true);
-        }).then(setTimeout(closeEmailOverlay,2500));
-    })
+        sendToForms().then(alterOverlayText("You're In", "Updates, invites, and access — you'll know before the others.")).then(() => {
+            localStorage.setItem('is_onEmailList', true);
+        }).then(setTimeout(closeEmailOverlay, 2500));
+    });
+    const buffer = 60;
+    window.addEventListener('scroll', () => {
+        document.querySelectorAll('.service:not(.reveal)').forEach((ele) => {
+            if ((window.scrollY + window.innerHeight) > ele.offsetTop + buffer) {
+                ele.classList.add('reveal');
+            }
+        })
+    });
         </script>
     </body>
 
