@@ -235,6 +235,6 @@ footer {
     }
 
     .service-image {
-        min-height: 15rem;
+        min-height: 500px;
     }
 }
