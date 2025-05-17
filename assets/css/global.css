@@ -48,20 +48,7 @@ body {
     --bs-btn-border-color: var(--leo-red);
 }
 
-@font-face {
-    font-family: "fancy";
-    src: url('../fonts/BilboSwashCaps-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
 
-
-@font-face {
-    font-family: "strict";
-    src: url('../fonts/RobotoCondensed-Light.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
 
 
 
@@ -95,22 +82,10 @@ body {
 }
 
 
-.regular-font {
-    font-family: "strict";
-}
-
 .text-red {
     color: var(--leo-red);
 }
 
-
-.fancy-font {
-    font-family: "fancy";
-}
-
-.strict-font {
-    font-family: "strict";
-}
 
 .max-vh-100 {
     max-height: 95vh;

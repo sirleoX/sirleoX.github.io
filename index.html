@@ -4,11 +4,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sir Leo</title>
+        <title>Request Sir Leo</title>
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/breakpoints.css">
         <link rel="stylesheet" href="assets/css/animations.css">
         <link rel="stylesheet" href="assets/css/global.css">
+        <link rel="stylesheet" href="assets/css/fonts.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="assets/fonts/BilboSwashCaps-Regular.ttf">
         <link rel="stylesheet" href="assets/fonts/RobotoCondensed-Medium.ttf">
         <script src="assets/js/bootstrap.bundle.js"></script>
@@ -31,8 +35,8 @@
     <body>
         <section id="overlay-verify-age" class="align-items-center d-none justify-content-center position-fixed d-flex overlay w-100 h-100">
             <div class="overlay-content justify-content-center align-items-center gap-3 rounded d-flex flex-column p-3 col-10 col-sm-8 h-50">
-                <h1 class="text-white text-center">Are you 21 or older?</h1>
-                <p class="text-white text-center">This site contains adult content intended for mature audiences. You must be 21 or older to enter.</p>
+                <h1 class="text-white text-center fancy-font">Are you 21 or older?</h1>
+                <p class="text-white text-center regular-font">This site contains adult content intended for mature audiences. You must be 21 or older to enter.</p>
                 <div class="d-flex flex-row align-items-center justify-content-center gap-3">
                     <button class="btn btn-lg btn-secondary col-6" onclick="verify()">Leave</button>
                     <button class="btn btn-lg btn-danger col-6" onclick="verify('yes')">Enter</button>
@@ -42,7 +46,7 @@
         <section id="overlay-email" class="align-items-center justify-content-center position-fixed d-none overlay w-100 h-100">
             <div class="overlay-content justify-content-center gap-2 rounded d-flex flex-column p-3 col-10 col-sm-8 h-50">
                 <h1 class="text-white text-center">Don’t Miss a Beat</h1>
-                <p class="text-white text-center">Get updates, event invites, and exclusive access — if you can handle it.</p>
+                <p class="text-white text-center regular-font">Get updates, event invites, and exclusive access — if you can handle it.</p>
                 <form id="emailSignup">
                     <input type="email" class="mb-4" name="entry.24457090" placeholder="Enter email here">
                     <div class="d-flex flex-row align-items-center justify-content-center gap-3">
@@ -58,21 +62,21 @@
             </div>
             <div id="opening-text" class="text-center">
                 <h1 class="display-1 text-red fancy-font">Explore Your Deepest Desires</h1>
-                <div id="opening-credits">
-                    <h3 class="text-white fancy-font text-center mb-3">~ Sir Leo</h3>
+                <div id="opening-credits" class="pt-3">
+                    <h3 class="text-secondary fancy-font text-center mb-3">- Sir Leo</h3>
                 </div>
             </div>
         </section>
         <section id="events" class="pt-2 px-2 px-md-5">
             <div class="section-title my-5 text-center">
-                <h1 class="text-red mb-3  display-3">Events</h1>
+                <h1 class="text-red mb-3 fancy-font display-3">Events</h1>
                 <p class="text-secondary text-center px-4 fs-5">Electrify your event with erotic impact play, live kink performanes, and immersive workshops that engage, educate, and arouse. </p>
             </div>
             <div class="event-services px-2 gap-md-4 justify-content-md-center d-md-flex flex-md-row">
                 <div class="service p-2 rounded my-4 d-flex flex-row flex-md-column col-md-4">
                     <div class="service-image col-4 col-md-12" name="spanking"></div>
                     <div class="service-description mt-md-4 ps-3 px-md-1 col-md-12 d-flex col-8 flex-column">
-                        <h3>Erotic Spanking</h3>
+                        <h3 class="fancy-font">Erotic Spanking</h3>
                         <p>Impact play as art - rhythmic, intimate, and unforgettable.</p>
                         <a href=""><button class="btn w-100 btn-danger">Spank Me</button></a>
                     </div>
@@ -80,7 +84,7 @@
                 <div class="service p-2 rounded my-4 d-flex flex-row flex-md-column col-md-4">
                     <div class="service-image col-4 col-md-12" name="performance"></div>
                     <div class="service-description mt-md-4 ps-3 px-md-1 col-md-12 d-flex col-8 flex-column">
-                        <h3>Performances</h3>
+                        <h3 class="fancy-font">Performances</h3>
                         <p>Live kink theatre that seduces the senses and stirs the crowd.</p>
                         <a href=""><button class="btn w-100 btn-danger">Book a Show</button></a>
                     </div>
@@ -88,7 +92,7 @@
                 <div class="service p-2 rounded my-4 d-flex flex-row flex-md-column col-md-4">
                     <div class="service-image col-4 col-md-12" name="workshop"></div>
                     <div class="service-description mt-md-4 ps-3 px-md-1 col-md-12  d-flex col-8 flex-column">
-                        <h3>Workshop</h3>
+                        <h3 class="fancy-font">Workshop</h3>
                         <p>Explore your desires through hands-on discovery.</p>
                         <a href=""><button class="btn w-100 btn-danger">Train Me</button></a>
                     </div>
@@ -97,14 +101,14 @@
         </section>
         <section id="private-events" class="pt-2 px-2 px-md-5 my-5">
             <div class="section-title my-5 text-center">
-                <h1 class="text-red mb-3 display-3">Private Sessions</h1>
+                <h1 class="text-red mb-3 fancy-font display-3">Private Sessions</h1>
                 <p class="text-secondary fs-5 px-4">One-on-one coaching and tailored kink services designated to deepen your exploration, refine your skills, and honor your desires. </p>
             </div>
             <div class="d-md-flex flex-md-row event-services px-2 gap-md-4 justify-content-md-center">
                 <div class="service p-2 rounded my-4 d-flex flex-row flex-md-column col-md-4">
                     <div class="service-image col-4 col-md-12" name="service"></div>
                     <div class="service-description mt-md-4 ps-3 px-md-1 col-md-12 d-flex col-8 flex-column">
-                        <h3>Service</h3>
+                        <h3 class="fancy-font">Service</h3>
                         <p>Tailored scenes designed to stir, soother, or ignite.</p>
                         <a href=""><button class="btn w-100 btn-danger">Book Yours</button></a>
                     </div>
@@ -112,7 +116,7 @@
                 <div class="service p-2 rounded my-4 d-flex flex-row flex-md-column col-md-4">
                     <div class="service-image col-4 col-md-12" name="coaching"></div>
                     <div class="service-description mt-md-4 ps-3 px-md-1 col-md-12 d-flex col-8 flex-column">
-                        <h3>Coaching</h3>
+                        <h3 class="fancy-font">Coaching</h3>
                         <p>Guided exploration to deepen your play and pleasure.</p>
                         <a href=""><button class="btn w-100 btn-danger">Guide Me</button></a>
                     </div>
@@ -120,7 +124,7 @@
             </div>
         </section>
         <footer class="p-4">
-            <h1 class="text-red text-center display-3 my-3">Contact Us</h1>
+            <h1 class="text-red text-center fancy-font display-3 my-3">Sir Leo Awaits</h1>
             <div class="d-flex flex-row row-cols-2 gap-2 justify-content-evenly">
                 <div class="flex-column d-flex">
                     <div class="d-flex flex-row align-items-center mb-2">
@@ -179,11 +183,6 @@
             </p>
         </footer>
         <script>
-    /*if (condition === 'subscribe') {
-        localStorage['is_onEmailList'] ='true';
-        document.querySelector('#overlay-email').style.setProperty('display','none','important')
-    } */
-
     function showEmailSignup() {
         document.querySelector('#overlay-email').style.setProperty('display', 'flex', 'important');
         document.querySelector('body').style.setProperty('overflow-y', 'hidden', 'important');
@@ -209,7 +208,7 @@
             document.querySelector('#overlay-verify-age').style.setProperty('display', 'none', 'important');
             document.querySelector('body').style.setProperty('overflow-y', 'auto', 'important');
 
-            if(is_onEmailList === 'false' || false || null)
+            if (is_onEmailList === 'false' || false || null)
                 setTimeout(showEmailSignup, 6000);
         } else {
             window.location.replace('https://www.scarleteen.com')
@@ -230,7 +229,7 @@
 
     document.getElementById("emailSignup").addEventListener('submit', (e) => {
         e.preventDefault();
-        if(e.submitter.id != 'close') {
+        if (e.submitter.id != 'close') {
             sendToForms().then(alterOverlayText("You're In", "Updates, invites, and access — you'll know before the others.")).then(() => {
                 localStorage.setItem('is_onEmailList', true);
             }).then(setTimeout(closeEmailOverlay, 2500));

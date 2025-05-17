@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "fancy";
+    src: url('../fonts/BilboSwashCaps-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "strict";
+    src: url('../fonts/RobotoCondensed-Light.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/*.regular-font {
+    font-family: "strict";
+}*/
+
+/*
+.fancy-font {
+    font-family: "fancy";
+}
+*/
+.strict-font {
+    font-family: "strict";
+}
+
+.fancy-font {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.service button {
+font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.regular-font, p {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.playfair-display-sc-regular {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.playfair-display-sc-bold {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.playfair-display-sc-black {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.playfair-display-sc-regular-italic {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.playfair-display-sc-bold-italic {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.playfair-display-sc-black-italic {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 900;
+  font-style: italic;
+}
