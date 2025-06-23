@@ -6,10 +6,51 @@
         <link rel="stylesheet" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Serif%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" />
         <title>Stitch Design</title>
         <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+        <link rel="stylesheet" href="assets/css/breakpoints.css">
+        <link rel="stylesheet" href="assets/css/animations.css">
+        <link rel="stylesheet" href="assets/css/global.css">
+        <link rel="stylesheet" href="assets/css/fonts.css">
+        <script>
+            var is_onEmailList = localStorage.getItem('is_onEmailList') || false;
+            var is_verified = localStorage.getItem('is_verified') || false;
+            window.addEventListener('DOMContentLoaded', function() {
+                if (is_verified === 'true'){
+                    document.querySelector('#overlay-verify-age').style.setProperty('display','none','important');
+                    document.querySelector('body').style.setProperty('overflow-y','auto','important');
+                    if(is_onEmailList === 'false' || false || null)
+                        setTimeout(showEmailSignup, 6000);
+                } else {
+                    document.querySelector('#overlay-verify-age').style.setProperty('display','flex','important');
+                }
+            });
+        </script>
         <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     </head>
 
     <body>
+      <section id="overlay-verify-age" class="align-items-center hidden justify-content-center position-fixed d-flex overlay w-full h-full">
+            <div class="overlay-content justify-content-center align-items-center gap-3 rounded d-flex flex-column p-3 col-10 col-sm-8 h-50">
+                <h1 class="text-white text-center fancy-font">Are you 21 or older?</h1>
+                <p class="text-white text-center regular-font">This site contains adult content intended for mature audiences. You must be 21 or older to enter.</p>
+                <div class="d-flex flex-row align-items-center justify-content-center gap-3">
+                    <button class="btn btn-lg btn-secondary col-6" onclick="verify()">Leave</button>
+                    <button class="btn btn-lg btn-danger col-6" onclick="verify('yes')">Enter</button>
+                </div>
+            </div>
+        </section>
+        <section id="overlay-email" class="align-items-center justify-content-center position-fixed hidden overlay w-100 h-100">
+            <div class="overlay-content justify-content-center gap-2 rounded d-flex flex-column p-3 col-10 col-sm-8 h-50">
+                <h1 class="text-white text-center">Don’t Miss a Beat</h1>
+                <p class="text-white text-center regular-font">Get updates, event invites, and exclusive access — if you can handle it.</p>
+                <form id="emailSignup">
+                    <input type="email" class="mb-4" name="entry.24457090" placeholder="Enter email here">
+                    <div class="d-flex flex-row align-items-center justify-content-center gap-3">
+                        <button class="btn  btn-secondary col-6 fs-5" id="close" onclick="closeEmailOverlay()">Stay Vanilla</button>
+                        <button type="submit" class="btn btn-danger col-6 fs-5">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </section>
         <div class="relative flex size-full min-h-screen flex-col bg-[#221111] dark group/design-root overflow-x-hidden" style='font-family: "Noto Serif", "Noto Sans", sans-serif;'>
             <div class="layout-container flex h-full grow flex-col">
                 <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#472424] px-10 py-3">
@@ -133,7 +174,74 @@
                     </div>
                 </div>
             </div>
-        </div>
+            <p class="text-red text-center mt-5 mb-1">
+                © 2025 Sir Leo. All Rights Reserved.
+            </p>
+        </footer>
+        <script>
+    function showEmailSignup() {
+        document.querySelector('#overlay-email').style.setProperty('display', 'flex', 'important');
+        document.querySelector('body').style.setProperty('overflow-y', 'hidden', 'important');
+    }
+
+
+    function closeEmailOverlay() {
+        document.querySelector('#overlay-email').style.setProperty('display', 'none', 'important');
+        document.querySelector('body').style.setProperty('overflow-y', 'auto', 'important');
+    }
+
+
+    function alterOverlayText(newHeader, newSubtext) {
+        document.querySelector('#overlay-email form').remove();
+        document.querySelector('#overlay-email h1').innerText = newHeader;
+        document.querySelector('#overlay-email p').innerText = newSubtext;
+    }
+
+
+    function verify(condition) {
+        if (condition === "yes") {
+            localStorage['is_verified'] = 'true';
+            document.querySelector('#overlay-verify-age').style.setProperty('display', 'none', 'important');
+            document.querySelector('body').style.setProperty('overflow-y', 'auto', 'important');
+
+            if (is_onEmailList === 'false' || false || null)
+                setTimeout(showEmailSignup, 6000);
+        } else {
+            window.location.replace('https://www.scarleteen.com')
+        }
+    }
+
+    async function sendToForms() {
+        let formData = new FormData(document.getElementById("emailSignup"));
+        console.log();
+        await fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSeMJsZ8PqaEK5wSS8qATyIYRkA-ZdsLyk-rid8gYXml3U2JFQ/formResponse', {
+            method: "POST",
+            body: formData,
+            mode: "no-cors"
+        });
+
+        return 'done';
+    }
+
+    document.getElementById("emailSignup").addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (e.submitter.id != 'close') {
+            sendToForms().then(alterOverlayText("You're In", "Updates, invites, and access — you'll know before the others.")).then(() => {
+                localStorage.setItem('is_onEmailList', true);
+            }).then(setTimeout(closeEmailOverlay, 2500));
+        } else {
+            closeEmailOverlay();
+        }
+    });
+    const buffer = 80;
+    window.addEventListener('scroll', () => {
+        document.querySelectorAll('.service:not(.reveal)').forEach((ele) => {
+            if ((window.scrollY + window.innerHeight) > ele.offsetTop + buffer) {
+                ele.classList.add('reveal');
+            }
+        })
+    });
+        </script>
     </body>
 
     </html>

@@ -175,8 +175,13 @@ footer {
         fill: var(--leo-red);
     }
 
-    p {
-        -webkit-text-stroke: 0.14px var(--leo-red);
+    .flex-column p {
+        /*-webkit-text-stroke: 0.48px var(--leo-red);*/
+        text-shadow:
+        -1px 0px 2px var(--leo-red), 
+        1px 0px 2px var(--leo-red),
+        0px -1px 2px var(--leo-red), 
+        0px 1px 2px var(--leo-red);
     }
 
     .flex-column {
