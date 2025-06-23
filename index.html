@@ -1,251 +1,139 @@
-    <!DOCTYPE html>
-    <html lang="en">
+    <html>
 
     <head>
-        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Request Sir Leo</title>
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/breakpoints.css">
-        <link rel="stylesheet" href="assets/css/animations.css">
-        <link rel="stylesheet" href="assets/css/global.css">
-        <link rel="stylesheet" href="assets/css/fonts.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="assets/fonts/BilboSwashCaps-Regular.ttf">
-        <link rel="stylesheet" href="assets/fonts/RobotoCondensed-Medium.ttf">
-        <script src="assets/js/bootstrap.bundle.js"></script>
-        <script>
-            var is_onEmailList = localStorage.getItem('is_onEmailList') || false;
-            var is_verified = localStorage.getItem('is_verified') || false;
-            window.addEventListener('DOMContentLoaded', function() {
-                if (is_verified === 'true'){
-                    document.querySelector('#overlay-verify-age').style.setProperty('display','none','important');
-                    document.querySelector('body').style.setProperty('overflow-y','auto','important');
-                    if(is_onEmailList === 'false' || false || null)
-                        setTimeout(showEmailSignup, 6000);
-                } else {
-                    document.querySelector('#overlay-verify-age').style.setProperty('display','flex','important');
-                }
-            });
-        </script>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+        <link rel="stylesheet" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Serif%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" />
+        <title>Stitch Design</title>
+        <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     </head>
 
     <body>
-        <section id="overlay-verify-age" class="align-items-center d-none justify-content-center position-fixed d-flex overlay w-100 h-100">
-            <div class="overlay-content justify-content-center align-items-center gap-3 rounded d-flex flex-column p-3 col-10 col-sm-8 h-50">
-                <h1 class="text-white text-center fancy-font">Are you 21 or older?</h1>
-                <p class="text-white text-center regular-font">This site contains adult content intended for mature audiences. You must be 21 or older to enter.</p>
-                <div class="d-flex flex-row align-items-center justify-content-center gap-3">
-                    <button class="btn btn-lg btn-secondary col-6" onclick="verify()">Leave</button>
-                    <button class="btn btn-lg btn-danger col-6" onclick="verify('yes')">Enter</button>
-                </div>
-            </div>
-        </section>
-        <section id="overlay-email" class="align-items-center justify-content-center position-fixed d-none overlay w-100 h-100">
-            <div class="overlay-content justify-content-center gap-2 rounded d-flex flex-column p-3 col-10 col-sm-8 h-50">
-                <h1 class="text-white text-center">Don’t Miss a Beat</h1>
-                <p class="text-white text-center regular-font">Get updates, event invites, and exclusive access — if you can handle it.</p>
-                <form id="emailSignup">
-                    <input type="email" class="mb-4" name="entry.24457090" placeholder="Enter email here">
-                    <div class="d-flex flex-row align-items-center justify-content-center gap-3">
-                        <button class="btn  btn-secondary col-6 fs-5" id="close" onclick="closeEmailOverlay()">Stay Vanilla</button>
-                        <button type="submit" class="btn btn-danger col-6 fs-5">Subscribe</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-        <section id="opening" class="mb-5">
-            <div id="opening-img" class="mb-5">
-                <img src="assets/imgs/dmz_3.jpeg" class="invisible img-fluid" alt="">
-            </div>
-            <div id="opening-text" class="text-center">
-                <h1 class="display-1 text-red fancy-font">Explore Your Deepest Desires</h1>
-                <div id="opening-credits" class="pt-3">
-                    <h3 class="text-secondary fancy-font text-center mb-3">- Sir Leo</h3>
-                </div>
-            </div>
-        </section>
-        <section id="events" class="pt-2 px-2 px-md-5">
-            <div class="section-title my-5 text-center">
-                <h1 class="text-red mb-3 fancy-font display-3">Events</h1>
-                <p class="text-secondary text-center px-4 fs-5">Electrify your event with erotic impact play, live kink performanes, and immersive workshops that engage, educate, and arouse. </p>
-            </div>
-            <div class="event-services px-2 gap-md-4 justify-content-md-center d-md-flex flex-md-row">
-                <div class="service p-2 rounded my-4 d-flex flex-row flex-md-column col-md-4">
-                    <div class="service-image col-4 col-md-12" name="spanking"></div>
-                    <div class="service-description mt-md-4 ps-3 px-md-1 col-md-12 d-flex col-8 flex-column">
-                        <h3 class="fancy-font">Erotic Spanking</h3>
-                        <p>Impact play as art - rhythmic, intimate, and unforgettable.</p>
-                        <a href=""><button class="btn w-100 btn-danger p-sm-3">Spank Me</button></a>
-                    </div>
-                </div>
-                <div class="service p-2 rounded my-4 d-flex flex-row flex-md-column col-md-4">
-                    <div class="service-image col-4 col-md-12" name="performance"></div>
-                    <div class="service-description mt-md-4 ps-3 px-md-1 col-md-12 d-flex col-8 flex-column">
-                        <h3 class="fancy-font">Performances</h3>
-                        <p>Live kink theatre that seduces the senses and stirs the crowd.</p>
-                        <a href=""><button class="btn w-100 btn-danger p-sm-3">Book a Show</button></a>
-                    </div>
-                </div>
-                <div class="service p-2 rounded my-4 d-flex flex-row flex-md-column col-md-4">
-                    <div class="service-image col-4 col-md-12" name="workshop"></div>
-                    <div class="service-description mt-md-4 ps-3 px-md-1 col-md-12  d-flex col-8 flex-column">
-                        <h3 class="fancy-font">Workshop</h3>
-                        <p>Explore your desires through hands-on discovery.</p>
-                        <a href=""><button class="btn w-100 btn-danger p-sm-3">Train Me</button></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="private-events" class="pt-2 px-2 px-md-5 my-5">
-            <div class="section-title my-5 text-center">
-                <h1 class="text-red mb-3 fancy-font display-3">Private Sessions</h1>
-                <p class="text-secondary fs-5 px-4">One-on-one coaching and tailored kink services designated to deepen your exploration, refine your skills, and honor your desires. </p>
-            </div>
-            <div class="d-md-flex flex-md-row event-services px-2 gap-md-4 justify-content-md-center">
-                <div class="service p-2 rounded my-4 d-flex flex-row flex-md-column col-md-4">
-                    <div class="service-image col-4 col-md-12" name="service"></div>
-                    <div class="service-description mt-md-4 ps-3 px-md-1 col-md-12 d-flex col-8 flex-column">
-                        <h3 class="fancy-font">Service</h3>
-                        <p>Tailored scenes designed to stir, soother, or ignite.</p>
-                        <a href=""><button class="btn w-100 btn-danger p-sm-3">Book Yours</button></a>
-                    </div>
-                </div>
-                <div class="service p-2 rounded my-4 d-flex flex-row flex-md-column col-md-4">
-                    <div class="service-image col-4 col-md-12" name="coaching"></div>
-                    <div class="service-description mt-md-4 ps-3 px-md-1 col-md-12 d-flex col-8 flex-column">
-                        <h3 class="fancy-font">Coaching</h3>
-                        <p>Guided exploration to deepen your play and pleasure.</p>
-                        <a href=""><button class="btn w-100 btn-danger p-sm-3">Guide Me</button></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <footer class="p-4">
-            <h1 class="text-red text-center fancy-font display-3 my-3">Sir Leo Awaits</h1>
-            <div class="d-flex flex-row row-cols-2 gap-2 justify-content-evenly">
-                <div class="flex-column d-flex">
-                    <div class="d-flex flex-row align-items-center mb-2">
-                        <a href="mailto:sir.black.leo@gmail.com" class="d-flex gap-2 flex-row text-decoration-none align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                                <path d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"></path>
+        <div class="relative flex size-full min-h-screen flex-col bg-[#221111] dark group/design-root overflow-x-hidden" style='font-family: "Noto Serif", "Noto Sans", sans-serif;'>
+            <div class="layout-container flex h-full grow flex-col">
+                <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#472424] px-10 py-3">
+                    <div class="flex items-center gap-4 text-white">
+                        <div class="size-4">
+                            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor"></path>
                             </svg>
-                            <p class="m-0 fs-5 text-white regular-font">sir.black.leo@gmail.com</p>
-                        </a>
+                        </div>
+                        <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">SirLeo</h2>
                     </div>
-                    <div class="d-flex flex-row align-items-center mb-2">
-                        <a href="https://www.instagram.com/sir_black_leo" target="_blank" rel="noopener noreferrer" class="d-flex gap-2 flex-row text-decoration-none align-items-center">
-                            <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                                <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
-                            </svg>
-                            <p class="m-0 fs-5 text-white regular-font">sir_black_leo</p>
-                        </a>
+                    <div class="flex flex-1 justify-end gap-8 invisible">
+                        <div class="flex items-center gap-9">
+                            <a class="text-white text-sm font-medium leading-normal" href="#">Shop</a>
+                            <a class="text-white text-sm font-medium leading-normal" href="#">About</a>
+                            <a class="text-white text-sm font-medium leading-normal" href="#">Contact</a>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#472424] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+                                <div class="text-white" data-icon="MagnifyingGlass" data-size="20px" data-weight="regular">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                                        <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#472424] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+                                <div class="text-white" data-icon="User" data-size="20px" data-weight="regular">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                                        <path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZY9jihbX5KT3FNutqCMQTohdAJvrrRaGhV2HiPR0of_PLxZdMISrkwlpMBN5N7iAylcl6mWzD0IC9XBsZHyKyc9U124rxg-xbQTRr1U4IsPtTyFtJrmLNkoEMLQjF8fQG9m71KOQGtpMhkgBuC7sr6c85sYXd0ENGS8DGlmdU2pfntq53IWgbpIJuW0pDB5rz23q8tOyhjcU_ohV7wappiX04HnqYemYnq8SOpmAxLh4_0S-FdD1zJD8ZkwoZasJeiEtWrqYFODw");'></div>
                     </div>
-                </div>
-                <div class="flex-column d-flex">
-                    <div class="d-flex flex-row align-items-center mb-2">
-                        <a href="https://fetlife.com/Sir__Leo" target="_blank" rel="noopener noreferrer" class="d-flex gap-1 flex-row text-decoration-none align-items-center">
-                            <svg viewBox="0 0 48 48" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <defs>
-                                        <style>
-    .cls-1 {
-        stroke-linecap: round;
-        stroke-linejoin: round;
-    }
-                                        </style>
-                                    </defs>
-                                    <path class="cls-1" d="M40.14,13.81h0c6.24-7.15-2.66-8.31-2.66-8.31,2.86,3.85,1.28,4.93.2,5.84l-.13.12A9.95,9.95,0,0,0,24,14.28a10,10,0,0,0-8.23-4.37h0a10,10,0,0,0-5.32,1.55l-.13-.12c-1.08-.91-2.66-2,.2-5.84,0,0-8.9,1.16-2.66,8.31h0A9.94,9.94,0,0,0,8,26.18H8L24,42.5,39.83,26.37l.08-.09.08-.1h0a9.94,9.94,0,0,0,.16-12.37Z"></path>
-                                </g>
-                            </svg>
-                            <p class="m-0 fs-5 text-white regular-font">Fet:Sir__Leo</p>
-                        </a>
-                    </div>
-                    <div class="d-flex flex-row align-items-center mb-2">
-                        <a href="tel:+3316909885" class="d-flex gap-2 flex-row text-decoration-none align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                                <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                                <path d="M16 64C16 28.7 44.7 0 80 0L304 0c35.3 0 64 28.7 64 64l0 384c0 35.3-28.7 64-64 64L80 512c-35.3 0-64-28.7-64-64L16 64zM224 448a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM304 64L80 64l0 320 224 0 0-320z"></path>
-                            </svg>
-                            <p class="m-0 fs-5 text-white regular-font">3316909885</p>
-                        </a>
+                </header>
+                <div class="px-4 md:px-30 lg:px-40 flex flex-1 justify-center py-5">
+                    <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                        <div class="@container">
+                            <div class="@[480px]:p-4">
+                                <div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4" style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBT8zM08WXcKs0Nf96m6u3d5_e6aDaaYnDD3dCTkYl0_q1zewK_rjRcyDOLgNCqqjGwx_4ICMFLFlxVDzOfdE-PEQXwI68Lfzp-w0cyTdIkC1Vp5nPIz2SUW6ZXs8TGy5swA1VqGgRfzWsFicyX88H7JRUracJHuYdnkCuxqCB631IblISiwfhwIr3K_CT8k5FJ2c39V9W6rju-Ws1a323xX3lsJe1JaUiCYvSh86H1YqDNs2JEhz0RADKA7IDQpykm2xjdDtqenkg");'>
+                                    <div class="flex flex-col gap-2 text-center">
+                                        <h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                                            Welcome to Eros
+                                        </h1>
+                                        <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                                            Explore the world of sensual domination and obedience training with Sir Leo. Whether you're seeking a private experience, event hire, training, or
+                                            collaboration, we offer a unique journey tailored to your desires.
+                                        </h2>
+                                    </div>
+                                    <div class="flex-wrap gap-3 flex justify-center">
+                                        <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#e92929] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
+                                            <span class="truncate">Book Your Experience</span>
+                                        </button>
+                                        <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#472424] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
+                                            <span class="truncate">Start Training</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-4 pt-6">Explore Your Journey</h2>
+                        <div class="px-4 py-6 md:py-4 @container">
+                            <div class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start">
+                                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB-ZQGDJuCJZXcwD9gKqiuZNlYGzUPE0p9OIcz7w2nOPBeqCcFv5pY53yc5F2QrMftWlolAwnmD-cUis_pwaWKnLJ1AeG4wXdbcYXaJQpnqWp0Qjn3xA4bH-DgwZcwf7BNSYd3TyW9GY3jBdfqgLitW-BrHPlKmY4xmtodrq3FmYMQNJN42TBRmY6-PKhbJ9rTJZI-2LJvmYjGN0S3cdVCMmdTqruCM5LHTQbVl8Kh-l8mbvoZ4_yT7VLryYRh2yZKXkbk7fBVgrOU");'></div>
+                                <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 @xl:px-4">
+                                    <p class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Experience Sir Leo</p>
+                                    <div class="flex items:start md:items-end gap-3 justify-between flex-col md:flex-row">
+                                        <p class="text-[#c89292] text-base font-normal leading-normal">
+                                            For individuals or couples, offering private sessions &amp; sacred rituals with sensual domination and obedience training.
+                                        </p>
+                                        <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-[#e92929] text-white text-sm font-medium leading-normal">
+                                            <span class="truncate">Book Your Experience</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-4 py-6 md:py-4 @container">
+                            <div class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start">
+                                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCXOjvWVsyHl7ox7lWWLhbI9Uj0hvEBRCqNTS_ya9K98-X-2oOQCE6D7Gyj1lctP-ReeepgN_seDyCyLmbDVaciOR-xLp4BNIx76jtfU9KQW-NF3mGa4YwryUEE048ZFZ3mXD3H0h-ztMAvOqGn8k4_Bnsh70hDDR9uwAUvuyF8pfwjOxyB4-uN4X3It55GvwFFMiv1JWYhxen48Y1HTaGhiNLpCT8yRfbyyCrFV78dl1ST8rovRU0Zy2qPBHrpEWMTv0ykhJEH1G8");'></div>
+                                <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 @xl:px-4">
+                                    <p class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Hire for Events</p>
+                                    <div class="flex items:start md:items-end gap-3 justify-between flex-col md:flex-row">
+                                        <p class="text-[#c89292] text-base font-normal leading-normal">For producers, venues, or hosts, featuring fire play, impact shows, and ritual performance.</p>
+                                        <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-[#e92929] text-white text-sm font-medium leading-normal">
+                                            <span class="truncate">Hire Sir Leo</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-4 py-6 md:py-4 @container">
+                            <div class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start">
+                                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCxm8Jk0MKRPAPWv7RxzMNUgHoOJBS6W07Hb_NIBKocpPiUkkUqr1YEHRApO8zwYGPqdPpq7RgFiakyPGzhwGh440YZwSrGTZ-AI7u7QVz8EqbEjntBEIcAjXzzbaX7KMcZ7ThOG-rCE356w_2DYfRqqX3zuz3_YkAwMy3soZtgIHiKnPSrL7w2IwDWV61o9ivCTYzQXkA3C_54dBMOdXlmbelfdMR5-Z_q6YloMi7zhtJBRVN8Tj4hJ6RO-LoyIt0E1ATFdWOOjng");'></div>
+                                <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 @xl:px-4">
+                                    <p class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Learn Dominance or Submission</p>
+                                    <div class="flex items:start md:items-end gap-3 justify-between flex-col md:flex-row">
+                                        <p class="text-[#c89292] text-base font-normal leading-normal">For Doms, subs, or switches, offering training in control, surrender, and scene craft.</p>
+                                        <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-[#e92929] text-white text-sm font-medium leading-normal">
+                                            <span class="truncate">Start Training</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-4 py-6 md:py-4 @container">
+                            <div class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start">
+                                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxKDW8Cuh5XxScEe0VOwhP27MuEDl-9Zgyq4SOejEMLeYFLF63VJ_JIlQ36ud5r1ryDLSZoS3xaqacJ6aKcGaNBGFMrqmnejllNII4QtaYFPbrFENMD5lj4jtLjeb5BPbF9QqWa-Uu-ePLsVjB7SGiyZ6Y8b7jbfTyGGQpRVdWRlUCyn9ZIFDGL8Qhp_3neeLL99iJflnph2skaYRvx56o0tH_3oNPJCIJb1F3bbU6M-LI32isp17Qa1fHqmdff0roli-H8QbwFLU");'></div>
+                                <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 py-4 @xl:px-4">
+                                    <p class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Collaborate with Sir Leo</p>
+                                    <div class="flex items:start md:items-end gap-3 justify-between flex-col md:flex-row">
+                                        <p class="text-[#c89292] text-base font-normal leading-normal">For photographers, brands, educators, to co-create erotic scenes, shoots, demos, or content.</p>
+                                        <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-[#e92929] text-white text-sm font-medium leading-normal">
+                                            <span class="truncate">Propose a Collaboration</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <p class="text-red text-center mt-5 mb-1">
-                © 2025 Sir Leo. All Rights Reserved.
-            </p>
-        </footer>
-        <script>
-    function showEmailSignup() {
-        document.querySelector('#overlay-email').style.setProperty('display', 'flex', 'important');
-        document.querySelector('body').style.setProperty('overflow-y', 'hidden', 'important');
-    }
-
-
-    function closeEmailOverlay() {
-        document.querySelector('#overlay-email').style.setProperty('display', 'none', 'important');
-        document.querySelector('body').style.setProperty('overflow-y', 'auto', 'important');
-    }
-
-
-    function alterOverlayText(newHeader, newSubtext) {
-        document.querySelector('#overlay-email form').remove();
-        document.querySelector('#overlay-email h1').innerText = newHeader;
-        document.querySelector('#overlay-email p').innerText = newSubtext;
-    }
-
-
-    function verify(condition) {
-        if (condition === "yes") {
-            localStorage['is_verified'] = 'true';
-            document.querySelector('#overlay-verify-age').style.setProperty('display', 'none', 'important');
-            document.querySelector('body').style.setProperty('overflow-y', 'auto', 'important');
-
-            if (is_onEmailList === 'false' || false || null)
-                setTimeout(showEmailSignup, 6000);
-        } else {
-            window.location.replace('https://www.scarleteen.com')
-        }
-    }
-
-    async function sendToForms() {
-        let formData = new FormData(document.getElementById("emailSignup"));
-        console.log();
-        await fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSeMJsZ8PqaEK5wSS8qATyIYRkA-ZdsLyk-rid8gYXml3U2JFQ/formResponse', {
-            method: "POST",
-            body: formData,
-            mode: "no-cors"
-        });
-
-        return 'done';
-    }
-
-    document.getElementById("emailSignup").addEventListener('submit', (e) => {
-        e.preventDefault();
-        if (e.submitter.id != 'close') {
-            sendToForms().then(alterOverlayText("You're In", "Updates, invites, and access — you'll know before the others.")).then(() => {
-                localStorage.setItem('is_onEmailList', true);
-            }).then(setTimeout(closeEmailOverlay, 2500));
-        } else {
-            closeEmailOverlay();
-        }
-    });
-    const buffer = 60;
-    window.addEventListener('scroll', () => {
-        document.querySelectorAll('.service:not(.reveal)').forEach((ele) => {
-            if ((window.scrollY + window.innerHeight) > ele.offsetTop + buffer) {
-                ele.classList.add('reveal');
-            }
-        })
-    });
-        </script>
+        </div>
     </body>
 
     </html>
