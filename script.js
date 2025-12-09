@@ -150,9 +150,21 @@ document.getElementById("reset").onclick = () => {
   document.getElementById("questionBox").innerHTML = "Comenzando de nuevo...";
 };
 
+function play_audio(verdict){
+  const correct_sound = document.querySelector("audio#right");
+ const wrong_sound = document.querySelector("audio#wrong");
+correct_sound.pause();
+wrong_sound.pause();
+ if ( verdict == true){
+     correct_sound.play()
+ } else {
+     wrong_sound.play()
+ }
+}
 
 function checkAnswer(b) {
     document.getElementById("questionBox").classList.add("noClick");
     is_correct =  b.getAttribute('data-correct')=="true" ? true:false;
+    play_audio(is_correct);
     console.log(is_correct)
 }
